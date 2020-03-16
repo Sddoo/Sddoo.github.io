@@ -208,7 +208,7 @@ img {
 .popup_main_image {
     width: auto;
     max-height: 90vh;
-    max-width: 90vw;
+    max-width: 85vw;
 }
 
 .close_button {
@@ -233,7 +233,7 @@ img {
 .popup_add_image {
     width: auto;
     max-height: 90vh;
-    max-width: 80vw;
+    max-width: 85vw;
     object-fit: cover;
 }
 
