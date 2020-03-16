@@ -1,4 +1,5 @@
 .info {
+    display: none;
     position: fixed;
     overflow-y: scroll;
     background-image: url("../contactsimages/fon.jpg");
@@ -8,8 +9,8 @@
     color: #AAAAAA;
     margin: 0;
     padding: 0;
-    width: 31%;
-    min-width: 500px;
+    width: 31vw;
+    min-width: 400px;
     left: -1000px;
     height: 100vh;
 }

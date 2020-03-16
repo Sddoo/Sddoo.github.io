@@ -2,6 +2,9 @@ var body = document.body, timer;
 let sliderCircle = $(".slider_circle");
 let imageWrap = $(".image_popup_wrap");
 let leftValue = '-1000px';
+let contacts = $('.contacts');
+let info = $('.info');
+let gridContainer = $(".grid_container");
 
 //optimization
 window.addEventListener('scroll', function() {
@@ -32,19 +35,18 @@ $(".popup").on('click', function() {
 	let imagePath;
 	let imageName;
 	let left;
-	let wrapper = $(".image_popup_wrap");
 
-	$(".contacts").animate({left: leftValue}, 500);
-	$(".info").animate({left: leftValue}, 500);
-	$(".grid_container").animate({left: "0%"}, 500);
+	contacts.animate({left: leftValue}, 500);
+	info.animate({left: leftValue}, 500);
+	gridContainer.animate({left: "0%"}, 500);
 	imagePath = $(this).parent().children(".grid_image")[0].src;
 	imageName = imagePath.slice(imagePath.lastIndexOf('/') + 1, imagePath.length);
 	$(".popup_bg").css({'display': 'block'});
-	wrapper.css({'display': 'block'});
+	imageWrap.css({'display': 'block'});
 	$(".popup_main_image")[0].src = 'images/' + imageName;
-	left = (window.innerWidth - parseInt(wrapper.css("width"))) / 2;
+	left = (window.innerWidth - parseInt(imageWrap.css("width"))) / 2;
 	left = left / window.innerWidth * 100;
-	wrapper.css({'left': left + '%'});
+	imageWrap.css({'left': left + '%'});
 	if (imageName.includes("with") === true) {
 		show_add_image(imageName, left);
 	}
@@ -75,7 +77,7 @@ $(document).mouseup(function () {
 
 // close popup
 function close_popup () {
-	$(".image_popup_wrap").css({'display': 'none'});
+	imageWrap.css({'display': 'none'});
 	$(".popup_bg").css({'display': 'none'});
 	$(".popup_add_image")[0].src = "";
 	$(".slider").css({'display': 'none'});
@@ -88,24 +90,36 @@ $(window).on("keydown", close_popup);
 
 // buttons
 document.querySelector(".open_info").addEventListener('click', function() {
-	if ($(".info").css("left") !== '0px') {
-		$(".info").animate({left: "0%",}, 500);
-		$(".grid_container").animate({left: parseInt($(".info").css("width")) + 'px'}, 500);
-		$(".contacts").animate({left: leftValue}, 500);
+	if (info.css("left") !== '0px') {
+		info.css({"display": "block"});
+		info.animate({left: "0%",}, 500);
+		gridContainer.animate({left: parseInt($(".info").css("width")) + 'px'}, 500);
+		contacts.animate({left: leftValue}, 500);
+		contacts.css({"display": "none"});
 	} else {
-		$(".info").animate({left: leftValue}, 500);
-		$(".grid_container").animate({left: "0%"}, 500);
+		info.animate({left: leftValue}, 500);
+		gridContainer.animate({left: "0%"}, 500);
 	}
 });
 
 document.querySelector(".open_contacts").addEventListener('click', function() {
-	if ($(".contacts").css("left") !== '0px') {
-		$(".contacts").animate({left: "0%",}, 500);
-		$(".grid_container").animate({left: parseInt($(".info").css("width")) + 'px',}, 500);
-		$(".info").animate({left: leftValue,}, 500);
+	if (contacts.css("left") !== '0px') {
+		contacts.css({"display": "block"});
+		contacts.animate({left: "0%",}, 500);
+		gridContainer.animate({left: parseInt($(".info").css("width")) + 'px',}, 500);
+		info.animate({left: leftValue,}, 500);
+		info.css({"display": "none"});
 	} else {
-		$(".contacts").animate({left: leftValue,}, 500);
-		$(".grid_container").animate({left: "0%",}, 500);
+		contacts.animate({left: leftValue,}, 500);
+		gridContainer.animate({left: "0%",}, 500);
 	}
 });
 
+document.querySelector(".open_work").addEventListener('click', function() {
+	contacts.animate({left: leftValue,}, 500);
+	info.animate({left: leftValue}, 500);
+	gridContainer.animate({left: "0%",}, 500);
+	sleep(500);
+	contacts.css({"display": "none"});
+	info.css({"display": "none"});
+});

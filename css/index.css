@@ -1,3 +1,6 @@
+@import "contact.css";
+@import "info.css";
+
 body {
     margin: 0;
     padding: 0;
@@ -50,7 +53,7 @@ img {
     grid-template-columns: repeat(10, 8fr);
     grid-template-rows: repeat(50, 1%);
     grid-row-gap: 30px;
-    grid-column-gap: 30px;
+    grid-column-gap: 45px;
 }
 
 .grid_item {
@@ -65,12 +68,11 @@ img {
 }
 
 .grid_image {
-    object-fit: cover;
+    object-fit: contain; /* magic style - change to cover and it will looks like perfect */
     width: 100%;
     height: 100%;
     transition: all 0.5s ease-in-out;
 }
-
 
 /* <row-start> / <column-start> / <row-end> / <column-end>;*/
 .first {
@@ -148,7 +150,7 @@ img {
     cursor: pointer;
 }
 
-.grid_item:hover .magnifier_wrap {
+.grid_item:hover .magnifier {
     display: block;
 }
 
@@ -175,20 +177,11 @@ img {
     text-align: center;
 }
 
-.magnifier_wrap {
-    display: none;
-    position: absolute;
-    font-size: 20px;
-    top: 10px;
-    right: 10px;
-    width: 20px;
-    height: 20px;
-}
-
 .magnifier {
     position: absolute;
-    width: 20px;
-    height: 20px;
+    display: none;
+    top: 10px;
+    right: 10px;
 }
 
 /*selected image*/
