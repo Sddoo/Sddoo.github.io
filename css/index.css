@@ -202,13 +202,13 @@ img {
     z-index: 4;
     top: 20px;
     left: 0;
-    max-width: 100%;
+    max-width: 90vw;
 }
 
 .popup_main_image {
     width: auto;
     max-height: 90vh;
-    object-fit: cover;
+    max-width: 90vw;
 }
 
 .close_button {
@@ -233,6 +233,7 @@ img {
 .popup_add_image {
     width: auto;
     max-height: 90vh;
+    max-width: 80vw;
     object-fit: cover;
 }
 

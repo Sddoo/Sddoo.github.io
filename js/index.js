@@ -70,6 +70,22 @@ sliderCircle.mousedown(function(e) {
 	});
 });
 
+sliderCircle.on('touchstart', function(e) {
+	$(document).on('touchmove', function(e) {
+		if (e.touches[0].pageX > parseInt(imageWrap.css("left")) &&
+			e.touches[0].pageX < (parseInt(imageWrap.css("left")) + parseInt(imageWrap.css("width")))) {
+			sliderCircle.css({'left': e.touches[0].pageX - parseInt(imageWrap.css("left")) - 25});
+			$('.abs').css({'width': e.touches[0].pageX - parseInt(imageWrap.css("left"))});
+		} else if (e.touches[0].pageX < parseInt(imageWrap.css("left"))){
+			sliderCircle.css({'left': -25});
+			$('.abs').css({'width': 0});
+		} else {
+			sliderCircle.css({'left': parseInt(imageWrap.css("width")) - 25});
+			$('.abs').css({'width': parseInt(imageWrap.css("width"))});
+		}
+	});
+});
+
 $(document).mouseup(function () {
 	$(document).unbind('mousemove');
 });
@@ -85,7 +101,10 @@ function close_popup () {
 
 $(".close_button").on('click', close_popup);
 $(".popup_bg").on('click', close_popup);
-$(window).on("keydown", close_popup);
+$(window).on("keydown", function (e) {
+	if (e.key === "Escape")
+		close_popup();
+});
 
 
 // buttons
@@ -95,6 +114,7 @@ document.querySelector(".open_info").addEventListener('click', function() {
 		info.animate({left: "0%",}, 500);
 		gridContainer.animate({left: parseInt($(".info").css("width")) + 'px'}, 500);
 		contacts.animate({left: leftValue}, 500);
+		sleep(500);
 		contacts.css({"display": "none"});
 	} else {
 		info.animate({left: leftValue}, 500);
@@ -108,6 +128,7 @@ document.querySelector(".open_contacts").addEventListener('click', function() {
 		contacts.animate({left: "0%",}, 500);
 		gridContainer.animate({left: parseInt($(".info").css("width")) + 'px',}, 500);
 		info.animate({left: leftValue,}, 500);
+		sleep(500);
 		info.css({"display": "none"});
 	} else {
 		contacts.animate({left: leftValue,}, 500);
