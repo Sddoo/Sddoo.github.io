@@ -289,6 +289,20 @@ img {
         font-size: 80%;
     }
 
+    .buttons_container {
+        width: 60px;
+        height: 300px;
+    }
+
+    .button {
+        width: 60px;
+        height: 60px;
+        font-size: 7pt;
+        border-radius: 30px;
+        margin: 0 5px 10px 0;
+        line-height: 60px;
+    }
+
     /* grids */
     .grid_container {
         grid-template-rows: repeat(50, 0.4%);
@@ -380,7 +394,21 @@ img {
 
 @media (max-width: 500px) {
     body {
-        font-size: 50%;
+        font-size: 40%;
+    }
+
+    .buttons_container {
+        width: 40px;
+        height: 300px;
+    }
+
+    .button {
+        width: 40px;
+        height: 40px;
+        font-size: 5pt;
+        border-radius: 20px;
+        margin: 0 5px 10px 0;
+        line-height: 40px;
     }
 
     /* grids */
