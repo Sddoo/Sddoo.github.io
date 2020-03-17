@@ -331,7 +331,11 @@ img {
     }
 
     .info, .contacts {
-        width: 40vw;
+        width: 70vw;
+    }
+
+    .info_image {
+        height: 35vh;
     }
 
     /* grids */
@@ -449,7 +453,7 @@ img {
     }
 
     .info, .contacts_text {
-        font-size: 150%;
+        font-size: 200%;
     }
 
     /*.fourteenth {*/
