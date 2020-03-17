@@ -298,6 +298,7 @@ img {
 @media (max-width: 768px) {
     body {
         font-size: 70%;
+        overflow: hidden;
     }
 
     /* grids */
