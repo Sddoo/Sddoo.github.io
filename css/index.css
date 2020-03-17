@@ -302,7 +302,6 @@ img {
 
     /* grids */
     .grid_container {
-        overflow-x: hidden;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(50, 0.8%);
     }
