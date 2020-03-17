@@ -306,9 +306,9 @@ img {
         grid-template-rows: repeat(50, 0.8%);
     }
 
-    .grid_image {
-        object-fit: cover;
-    }
+    /*.grid_image {*/
+    /*    object-fit: cover;*/
+    /*}*/
 
     /* <row-start> / <column-start> / <row-end> / <column-end>;*/
     .first {
@@ -385,6 +385,6 @@ img {
 
     /* grids */
     .grid_container {
-        grid-template-rows: repeat(50, 0.09%);
+        grid-template-rows: repeat(50, 0.0001%);
     }
 }
