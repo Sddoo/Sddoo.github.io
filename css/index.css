@@ -298,11 +298,11 @@ img {
 @media (max-width: 768px) {
     body {
         font-size: 70%;
-        overflow: hidden;
     }
 
     /* grids */
     .grid_container {
+        overflow-x: hidden;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(50, 0.8%);
     }
