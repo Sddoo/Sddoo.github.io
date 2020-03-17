@@ -32,6 +32,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../matcha" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -67,7 +68,8 @@
       <workItem from="1584379696745" duration="9748000" />
       <workItem from="1584396020186" duration="2918000" />
       <workItem from="1584440108051" duration="7070000" />
-      <workItem from="1584448571934" duration="2857000" />
+      <workItem from="1584448571934" duration="4454000" />
+      <workItem from="1584477501067" duration="3192000" />
     </task>
     <servers />
   </component>
@@ -79,6 +81,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="178" key="#JavaScript/0.0.1920.1040@0.0.1920.1040" timestamp="1583578288397" />
+    <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1584477987685">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1584477987685" />
     <state x="461" y="162" key="SettingsEditor" timestamp="1583517043672">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
