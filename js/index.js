@@ -92,18 +92,18 @@ $(document).mouseup(function () {
 
 
 // close popup
-function close_popup () {
+function closePopup () {
 	imageWrap.css({'display': 'none'});
 	$(".popup_bg").css({'display': 'none'});
 	$(".popup_add_image")[0].src = "";
 	$(".slider").css({'display': 'none'});
 }
 
-$(".close_button").on('click', close_popup);
-$(".popup_bg").on('click', close_popup);
+$(".close_button").on('click', closePopup);
+$(".popup_bg").on('click', closePopup);
 $(window).on("keydown", function (e) {
 	if (e.key === "Escape")
-		close_popup();
+		closePopup();
 });
 
 
@@ -115,10 +115,12 @@ document.querySelector(".open_info").addEventListener('click', function() {
 		gridContainer.animate({left: parseInt($(".info").css("width")) + 'px'}, 500);
 		contacts.animate({left: leftValue}, 500);
 		sleep(500);
-		contacts.css({"display": "none"});
+		// setTimeout(contacts.css({"display": "none"}), 500);
 	} else {
 		info.animate({left: leftValue}, 500);
 		gridContainer.animate({left: "0%"}, 500);
+		sleep(500);
+		info.css({"display": "none"});
 	}
 });
 
@@ -128,11 +130,15 @@ document.querySelector(".open_contacts").addEventListener('click', function() {
 		contacts.animate({left: "0%",}, 500);
 		gridContainer.animate({left: parseInt($(".info").css("width")) + 'px',}, 500);
 		info.animate({left: leftValue,}, 500);
+		// setTimeout(info.css({"display": "none"}), 500);
 		sleep(500);
 		info.css({"display": "none"});
 	} else {
 		contacts.animate({left: leftValue,}, 500);
 		gridContainer.animate({left: "0%",}, 500);
+		// setTimeout(contacts.css({"display": "none"}), 500);
+		sleep(500);
+		contacts.css({"display": "none"});
 	}
 });
 
@@ -141,6 +147,8 @@ document.querySelector(".open_work").addEventListener('click', function() {
 	info.animate({left: leftValue}, 500);
 	gridContainer.animate({left: "0%",}, 500);
 	sleep(500);
+	// setTimeout(contacts.css({"display": "none"}), 500);
+	// setTimeout(info.css({"display": "none"}), 500);
 	contacts.css({"display": "none"});
 	info.css({"display": "none"});
 });

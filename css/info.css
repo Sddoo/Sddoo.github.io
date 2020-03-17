@@ -10,7 +10,6 @@
     margin: 0;
     padding: 0;
     width: 31vw;
-    min-width: 400px;
     left: -1000px;
     height: 100vh;
 }
@@ -35,10 +34,10 @@ h1, h3 {
 
 .info_image {
     width: 100%;
-    height: 60vh;
+    height: 30vw;
     background-image: url("../infimages/7.1.jpg");
     background-repeat: no-repeat;
-    object-fit: contain;
+    background-size: contain;
     transition: all 0.5s ease-in-out;
 }
 
@@ -53,7 +52,7 @@ h1, h3 {
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-between;
-    margin-bottom: 50px;
+    margin-bottom: 1%;
 }
 
 .info_skills {

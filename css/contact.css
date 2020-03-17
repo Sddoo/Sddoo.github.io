@@ -1,7 +1,7 @@
 .contacts {
     display: none;
     position: fixed;
-    background-color: black;
+    overflow: hidden;
     background-image: url("../contactsimages/fon.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -9,14 +9,13 @@
     color: #AAAAAA;
     margin: 0;
     padding: 0;
-    width: 31%;
-    min-width: 500px;
+    width: 31vw;
     left: -1000px;
     height: 100vh;
 }
 
 .contacts_container {
-    width: 80%;
+    width: 70%;
     margin: auto;
 }
 
