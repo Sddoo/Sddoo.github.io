@@ -19,7 +19,7 @@ window.addEventListener('scroll', function() {
 
 
 // open image
-function show_add_image(imageName, left) {
+function showAddImage(imageName, left) {
 	let slider = $(".slider");
 
 	$(".popup_add_image")[0].src = 'images/' + imageName.slice(0, 1) + ".2.jpg";
@@ -31,24 +31,46 @@ function show_add_image(imageName, left) {
 	$('.abs').css({'width': parseInt(sliderCircle.css('left')) + 25 + 'px'});
 }
 
-$(".popup").on('click', function() {
+function showMainImage(elem) {
 	let imagePath;
 	let imageName;
 	let left;
 
+	$(".image_popup_text").html(elem.children(".description").html());
+	$(".arrow").css({'display': 'block'});
 	contacts.animate({left: leftValue}, 500);
 	info.animate({left: leftValue}, 500);
 	gridContainer.animate({left: "0%"}, 500);
-	imagePath = $(this).parent().children(".grid_image")[0].src;
+	imagePath = elem.children(".grid_image")[0].src;
 	imageName = imagePath.slice(imagePath.lastIndexOf('/') + 1, imagePath.length);
-	$(".popup_bg").css({'display': 'block'});
-	imageWrap.css({'display': 'block'});
 	$(".popup_main_image")[0].src = 'images/' + imageName;
+	$(".popup_main_image")[0].alt = elem.attr('class').split(' ')[0];
 	left = (window.innerWidth - parseInt(imageWrap.css("width"))) / 2;
 	left = left / window.innerWidth * 100;
-	imageWrap.css({'left': left + '%'});
+	$(".popup_bg").css({'display': 'block'});
+	imageWrap.css({'display': 'block', 'left': left + '%'});
+	// $(".image_popup_text").css({"display": 'block',
+	// 	'left': left + '%',
+	// 	'top': (imageWrap.position().top + imageWrap.outerHeight(true)) / window.innerHeight * 100 + '%',
+	// 	'width': imageWrap.css('width')});
 	if (imageName.includes("with") === true) {
-		show_add_image(imageName, left);
+		showAddImage(imageName, left);
+	}
+}
+
+$(".popup").on('click', function() {
+	showMainImage($(this).parent());
+});
+
+$(".arrow").on('click', function() {
+	let className = $(".popup_main_image")[0].alt;
+
+	if ($(this).hasClass("larrow") && typeof $("." + className).prev(".grid_item")[0] !== 'undefined') {
+		closePopup();
+		showMainImage($("." + className).prev(".grid_item"));
+	} else if ($(this).hasClass("rarrow") && typeof $("." + className).next(".grid_item")[0] !== 'undefined') {
+		closePopup();
+		showMainImage($("." + className).next(".grid_item"));
 	}
 });
 
@@ -97,6 +119,9 @@ function closePopup () {
 	$(".popup_bg").css({'display': 'none'});
 	$(".popup_add_image")[0].src = "";
 	$(".slider").css({'display': 'none'});
+	$(".image_popup_text").html("");
+	$(".image_popup_text").css({'display': 'none'});
+	$(".arrow").css({'display': 'none'});
 }
 
 $(".close_button").on('click', closePopup);
@@ -152,3 +177,5 @@ document.querySelector(".open_work").addEventListener('click', function() {
 	contacts.css({"display": "none"});
 	info.css({"display": "none"});
 });
+
+
