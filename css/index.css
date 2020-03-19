@@ -173,6 +173,10 @@ img {
     grid-area: 54 / 4 / 62 / 8;
 }
 
+.nineteenth {
+    grid-area: 54 / 8 / 61 / 11;
+}
+
 /* popup */
 .grid_item:hover .popup {
     display: flex;
@@ -255,15 +259,16 @@ img {
 .popup_main_image, .popup_add_image {
     width: auto;
     max-height: 90vh;
-    max-width: 95vw;
+    max-width: 90vw;
 }
 
 .close_button {
-    position: absolute;
+    display: none;
+    position: fixed;
+    z-index: 10;
+    top: 20px;
     width: 25px;
     height: 25px;
-    top: 0;
-    left: 101%;
     cursor: pointer;
 }
 

@@ -51,6 +51,8 @@ function showMainImage(elem) {
 	imageWrap.css({'display': 'block', 'left': left + '%'});
 	$(".image_popup_text_wrap").css({"display": 'block',
 								'width': $(".popup_main_image").width()});
+	$(".close_button").css({'display': 'block',
+							'left': left + $(".popup_main_image").width() / window.innerWidth * 100 + 1 + '%'});
 	console.log(($(".popup_main_image").width() * 100) / imageWrap.width());
 	if (imageName.includes("with") === true) {
 		showAddImage(imageName, left);
@@ -121,6 +123,7 @@ function closePopup () {
 	$(".image_popup_text").html("");
 	$(".image_popup_text_wrap").css({'display': 'none'});
 	$(".arrow").css({'display': 'none'});
+	$(".close_button").css({'display': 'none'});
 }
 
 $(".close_button").on('click', closePopup);
