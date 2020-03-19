@@ -49,10 +49,9 @@ function showMainImage(elem) {
 	left = left / window.innerWidth * 100;
 	$(".popup_bg").css({'display': 'block'});
 	imageWrap.css({'display': 'block', 'left': left + '%'});
-	// $(".image_popup_text").css({"display": 'block',
-	// 	'left': left + '%',
-	// 	'top': (imageWrap.position().top + imageWrap.outerHeight(true)) / window.innerHeight * 100 + '%',
-	// 	'width': imageWrap.css('width')});
+	$(".image_popup_text_wrap").css({"display": 'block',
+								'width': $(".popup_main_image").width()});
+	console.log(($(".popup_main_image").width() * 100) / imageWrap.width());
 	if (imageName.includes("with") === true) {
 		showAddImage(imageName, left);
 	}
@@ -120,7 +119,7 @@ function closePopup () {
 	$(".popup_add_image")[0].src = "";
 	$(".slider").css({'display': 'none'});
 	$(".image_popup_text").html("");
-	$(".image_popup_text").css({'display': 'none'});
+	$(".image_popup_text_wrap").css({'display': 'none'});
 	$(".arrow").css({'display': 'none'});
 }
 

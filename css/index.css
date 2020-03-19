@@ -35,13 +35,20 @@ img {
 .button {
     width: 100%;
     height: 5.5vw;
-    font-size: 0.9vw;
+    font-size: 0.8vw;
     border-radius: 5.5vw;
     margin: 0 5px 10px 0;
-    background-color: white;
+    background-color: #363636;
+    color: white;
     cursor: pointer;
     text-align: center;
     line-height: 5.5vw;
+    transition: all 0.5s ease-in-out;
+}
+
+.button:hover {
+    background-color: white;
+    color: black;
 }
 
 /* grids */
@@ -115,6 +122,11 @@ img {
 
 .eighth {
     grid-area: 25 / 1 / 32 / 4;
+}
+
+.library_plan {
+    width: 90%;
+    margin: 0 5%;
 }
 
 .nineth {
@@ -220,6 +232,24 @@ img {
     top: 20px;
     left: 0;
     max-width: 90vw;
+    max-height: 100vh;
+    overflow-y: scroll;
+}
+
+.image_popup_wrap::-webkit-scrollbar {
+    display: none;
+}
+
+.image_popup_text_wrap {
+    display: none;
+    z-index: 4;
+    background-color: white;
+    height: auto;
+}
+
+.image_popup_text {
+    width: 80%;
+    margin: auto;
 }
 
 .popup_main_image, .popup_add_image {
@@ -269,15 +299,6 @@ img {
     cursor: pointer;
 }
 
-.image_popup_text {
-    position: fixed;
-    display: none;
-    z-index: 4;
-    background-color: white;
-    overflow-y: scroll;
-    height: 100vh;
-}
-
 .arrow {
     position: fixed;
     display: none;
@@ -294,9 +315,11 @@ img {
     right: 1%;
 }
 
-/*.image_popup_text::-webkit-scrollbar {*/
-/*    display: none;*/
-/*}*/
+/*other*/
+.offset {
+    height: 10vh;
+}
+
 
 @media (max-width: 2560px) {
     body {
@@ -509,4 +532,3 @@ img {
         grid-template-rows: repeat(100, 1.1%);
     }
 }
-
