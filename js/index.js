@@ -58,13 +58,14 @@ function showMainImage(elem) {
 	}
 }
 
-$(".popup").on('click', function() {
-	console.log($(this).parent().attr("class"));
-	if ($(this).parent().attr("class").includes("grid_item")) {
-		showMainImage($(this).parent());
-	} else if ($(this).parent().attr("class").includes("paramoni_menu_item")) {
-		console.log("gello");
-	}
+$(document).ready( function () {
+	$(document).on('click', '.popup', function() {
+		if ($(this).parent().attr("class").includes("grid_item")) {
+			showMainImage($(this).parent());
+		} else if ($(this).parent().attr("class").includes("paramoni_menu_item")) {
+			$('.paramoni_chosen_menu_content').html($(this).parent().children('.paramoni_menu_content').html());
+		}
+	});
 });
 
 $(".arrow").on('click', function() {
@@ -77,10 +78,6 @@ $(".arrow").on('click', function() {
 		closePopup();
 		showMainImage($("." + className).next(".grid_item"));
 	}
-});
-
-$(document).on('click', function(e) {
-	console.log(e.target);
 });
 
 // slider
@@ -142,7 +139,7 @@ $(window).on("keydown", function (e) {
 
 
 // buttons
-document.querySelector(".open_info").addEventListener('click', function() {
+$(".open_info").on('click', function() {
 	if (info.css("left") !== '0px') {
 		info.css({"display": "block"});
 		info.animate({left: "0%",}, 500);
@@ -158,7 +155,7 @@ document.querySelector(".open_info").addEventListener('click', function() {
 	}
 });
 
-document.querySelector(".open_contacts").addEventListener('click', function() {
+$(".open_contacts").on('click', function() {
 	if (contacts.css("left") !== '0px') {
 		contacts.css({"display": "block"});
 		contacts.animate({left: "0%",}, 500);
@@ -176,7 +173,7 @@ document.querySelector(".open_contacts").addEventListener('click', function() {
 	}
 });
 
-document.querySelector(".open_work").addEventListener('click', function() {
+$(".open_work").on('click', function() {
 	contacts.animate({left: leftValue,}, 500);
 	info.animate({left: leftValue}, 500);
 	gridContainer.animate({left: "0%",}, 500);

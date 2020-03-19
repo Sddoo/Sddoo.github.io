@@ -76,7 +76,7 @@ img {
 }
 
 .grid_image {
-    object-fit: contain; /* magic style - change to cover and it will looks like perfect */
+    object-fit: contain; /* magic style - change to 'cover' and it will looks like perfect */
     width: 100%;
     height: 100%;
     transition: all 0.5s ease-in-out;
@@ -92,16 +92,30 @@ img {
     margin-top: 20px;
 }
 
-.paramoni_menu {
+.intro_menu_wrap {
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0;
+}
+
+.paramoni_intro {
+    display: inline-block;
+    width: 50%;
+}
+
+.paramoni_menu {
+    display: inline-flex;
+    flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
+    width: 50%;
 }
 
 .paramoni_menu_item {
     position: relative;
-    width: 40%;
+    width: 50%;
     cursor: pointer;
 }
 
@@ -127,6 +141,18 @@ img {
 .paramoni_chosen_menu_content {
     width: 100%;
     height: 100vh;
+}
+
+.paramoni_text_content {
+    box-sizing: border-box;
+    width: 60%;
+    height: 100%;
+    font-family: 'Comfortaa', sans-serif;
+    overflow-x: auto;
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap !important;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
 }
 
 .second {
@@ -442,89 +468,10 @@ img {
 
     /* grids */
     .grid_container {
-        /*grid-template-columns: repeat(2, 1fr);*/
         grid-template-rows: repeat(100, 1.15%);
         grid-row-gap: 5px;
         grid-column-gap: 5px;
     }
-
-    /* <row-start> / <column-start> / <row-end> / <column-end>;*/
-    /*.first {*/
-    /*    grid-area: 1 / 1 / 6 / 3;*/
-    /*    margin-top: 20px;*/
-    /*}*/
-
-    /*.second {*/
-    /*    grid-area: 6 / 1 / 14 / 1;*/
-    /*}*/
-
-    /*.third {*/
-    /*    grid-area: 6 / 2 / 12 / 2;*/
-    /*}*/
-
-    /*.fourth {*/
-    /*    grid-area: 14 / 1 / 22 / 1;*/
-    /*}*/
-
-    /*.fifth {*/
-    /*    grid-area: 12 / 2 / 20 / 2;*/
-    /*}*/
-
-    /*.sixth {*/
-    /*    grid-area: 22 / 1 / 30 / 1;*/
-    /*}*/
-
-    /*.seventh {*/
-    /*    grid-area: 20 / 2 / 32 / 2;*/
-    /*}*/
-
-    /*.eighth {*/
-    /*    grid-area: 30 / 1 / 36 / 1;*/
-    /*}*/
-
-    /*.nineth {*/
-    /*    grid-area: 32 / 2 / 39 / 2;*/
-    /*}*/
-
-    /*.tenth {*/
-    /*    grid-area: 36 / 1 / 45 / 1;*/
-    /*}*/
-
-    /*.eleventh {*/
-    /*    grid-area: 39 / 2 / 44 / 2;*/
-    /*}*/
-
-    /*.twelveth {*/
-    /*    grid-area: 45 / 1 / 53 / 1;*/
-    /*}*/
-
-    /*.thirteenth {*/
-    /*    grid-area: 44 / 2 / 53 / 2;*/
-    /*}*/
-
-    /*.fourteenth {*/
-    /*    grid-area: 53 / 1 / 65 / 1;*/
-    /*}*/
-
-    /*.fourteenth .grid_image {*/
-    /*    object-fit: cover;*/
-    /*}*/
-
-    /*.fifteenth {*/
-    /*    grid-area: 53 / 2 / 58 / 2;*/
-    /*}*/
-
-    /*.sixteenth {*/
-    /*    grid-area: 65 / 1 / 72 / 1;*/
-    /*}*/
-
-    /*.seventeenth {*/
-    /*    grid-area: 58 / 2 / 65 / 2;*/
-    /*}*/
-
-    /*.eighteenth {*/
-    /*    grid-area: 65 / 2 / 71 / 2;*/
-    /*}*/
 }
 
 
