@@ -50,17 +50,21 @@ function showMainImage(elem) {
 	$(".popup_bg").css({'display': 'block'});
 	imageWrap.css({'display': 'block', 'left': left + '%'});
 	$(".image_popup_text_wrap").css({"display": 'block',
-								'width': $(".popup_main_image").width()});
+									'width': $(".popup_main_image").width()});
 	$(".close_button").css({'display': 'block',
 							'left': left + $(".popup_main_image").width() / window.innerWidth * 100 + 1 + '%'});
-	console.log(($(".popup_main_image").width() * 100) / imageWrap.width());
 	if (imageName.includes("with") === true) {
 		showAddImage(imageName, left);
 	}
 }
 
 $(".popup").on('click', function() {
-	showMainImage($(this).parent());
+	console.log($(this).parent().attr("class"));
+	if ($(this).parent().attr("class").includes("grid_item")) {
+		showMainImage($(this).parent());
+	} else if ($(this).parent().attr("class").includes("paramoni_menu_item")) {
+		console.log("gello");
+	}
 });
 
 $(".arrow").on('click', function() {
@@ -75,6 +79,9 @@ $(".arrow").on('click', function() {
 	}
 });
 
+$(document).on('click', function(e) {
+	console.log(e.target);
+});
 
 // slider
 sliderCircle.mousedown(function(e) {
