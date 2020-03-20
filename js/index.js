@@ -36,7 +36,7 @@ function showMainImage(elem) {
 	let imageName;
 	let left;
 
-	$(".image_popup_text").html(elem.children(".description").html());
+	$(".image_popup_text_wrap").html(elem.children(".description").html());
 	$(".arrow").css({'display': 'block'});
 	contacts.animate({left: leftValue}, 500);
 	info.animate({left: leftValue}, 500);
@@ -61,6 +61,8 @@ function showMainImage(elem) {
 $(document).ready( function () {
 	$(document).on('click', '.popup', function() {
 		if ($(this).parent().attr("class").includes("grid_item")) {
+			if ($(this).parent().attr("class").includes("first"))
+				$('.popup_main_image').css({'width': '75vw'});
 			showMainImage($(this).parent());
 		} else if ($(this).parent().attr("class").includes("paramoni_menu_item")) {
 			$('.paramoni_chosen_menu_content').html($(this).parent().children('.paramoni_menu_content').html());
@@ -121,10 +123,11 @@ $(document).mouseup(function () {
 // close popup
 function closePopup () {
 	imageWrap.css({'display': 'none'});
+	$('.popup_main_image').css({'width': ''});
 	$(".popup_bg").css({'display': 'none'});
 	$(".popup_add_image")[0].src = "";
 	$(".slider").css({'display': 'none'});
-	$(".image_popup_text").html("");
+	$(".image_popup_text_wrap").html("");
 	$(".image_popup_text_wrap").css({'display': 'none'});
 	$(".arrow").css({'display': 'none'});
 	$(".close_button").css({'display': 'none'});
