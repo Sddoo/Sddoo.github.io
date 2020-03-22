@@ -237,7 +237,7 @@ img {
 }
 
 .nineth {
-    grid-area: 27 / 4 / 37 / 8;
+    grid-area: 27 / 4 / 36 / 8;
 }
 
 .tenth {
@@ -253,7 +253,7 @@ img {
 }
 
 .thirteenth {
-    grid-area: 37 / 8 / 47 / 11;
+    grid-area: 37 / 8 / 46 / 11;
 }
 
 .fourteenth {
@@ -261,7 +261,7 @@ img {
 }
 
 .fifteenth {
-    grid-area: 48 / 4 / 54 / 8;
+    grid-area: 47 / 4 / 53 / 8;
 }
 
 .fifteenth .grid_image {
@@ -269,19 +269,19 @@ img {
 }
 
 .sixteenth {
-    grid-area: 47 / 8 / 54 / 11;
+    grid-area: 46 / 8 / 53 / 11;
 }
 
 .seventeenth {
-    grid-area: 49 / 1 / 57 / 4;
+    grid-area: 49 / 1 / 56 / 4;
 }
 
 .eighteenth {
-    grid-area: 54 / 4 / 62 / 8;
+    grid-area: 53 / 4 / 61 / 8;
 }
 
 .nineteenth {
-    grid-area: 54 / 8 / 61 / 11;
+    grid-area: 53 / 8 / 60 / 11;
 }
 
 /* popup */
