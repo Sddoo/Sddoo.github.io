@@ -82,6 +82,14 @@ img {
     transition: all 0.5s ease-in-out;
 }
 
+.interactive {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    width: 30px;
+    height: 30px;
+}
+
 .description {
     display: none;
 }
@@ -104,7 +112,6 @@ img {
     flex-direction: row;
     justify-content: space-between;
     width: 80%;
-    height: auto;
     margin: auto;
     padding-top: 50px;
     color: white;
@@ -129,12 +136,15 @@ img {
     margin: auto;
 }
 
+.paramoni_menu_wrap {
+    width: 30%;
+}
+
 .paramoni_menu {
     position: sticky;
     position: -webkit-sticky;
-    right: 10px;
     top: 10px;
-    width: 30%;
+    width: 100%;
 }
 
 .paramoni_menu_item {
@@ -208,7 +218,7 @@ img {
 }
 
 .eighth {
-    grid-area: 25 / 1 / 32 / 4;
+    grid-area: 25 / 1 / 31 / 4;
 }
 
 .library_description {
@@ -235,11 +245,11 @@ img {
 }
 
 .eleventh {
-    grid-area: 32 / 1 / 37 / 4;
+    grid-area: 31 / 1 / 36 / 4;
 }
 
 .twelveth {
-     grid-area: 37 / 4 / 48 / 8;
+     grid-area: 36 / 4 / 47 / 8;
 }
 
 .thirteenth {
@@ -247,7 +257,7 @@ img {
 }
 
 .fourteenth {
-    grid-area: 37 / 1 / 50 / 4;
+    grid-area: 36 / 1 / 49 / 4;
 }
 
 .fifteenth {
@@ -263,7 +273,7 @@ img {
 }
 
 .seventeenth {
-    grid-area: 50 / 1 / 58 / 4;
+    grid-area: 49 / 1 / 57 / 4;
 }
 
 .eighteenth {
