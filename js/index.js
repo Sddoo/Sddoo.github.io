@@ -7,12 +7,12 @@ let info = $('.info');
 let gridContainer = $(".grid_container");
 
 
-document.body.style.overflow = 'hidden';
+document.body.style.overflowY = 'hidden';
 
 //preloader
 window.onload = function () {
 	document.body.classList.add('loaded_hiding');
-	document.body.style.overflow = 'scroll';
+	document.body.style.overflowY = 'scroll';
 	window.setTimeout(function () {
 		document.body.classList.add('loaded');
 		document.body.classList.remove('loaded_hiding');
@@ -33,14 +33,15 @@ window.addEventListener('scroll', function() {
 
 // open image
 function showAddImage(imageName, left) {
-	let slider = $(".slider");
+	let slider = $(".slider"),
+		coords = document.querySelector('.image_popup_wrap').getBoundingClientRect();
 
 	$(".popup_add_image")[0].src = 'images/' + imageName.slice(0, 1) + ".2.jpg";
-	slider.css({'left': left + '%',
-				'top': parseInt($('.image_popup_wrap').css('height')) + 40 + 'px',
-				'width': parseInt($(".popup_main_image").css('width')),
+	slider.css({'left': coords.left,
+				'top': coords.bottom + 15 + 'px',
+				'width': coords.right - coords.left + 'px',
 				'display': 'block'});
-	sliderCircle.css({'left': parseInt($(".image_popup_wrap").css('width')) / 2});
+	sliderCircle.css({'left': (coords.right - coords.left) / 2});
 	$('.abs').css({'width': parseInt(sliderCircle.css('left')) + 25 + 'px'});
 }
 
@@ -74,8 +75,9 @@ function showMainImage(elem) {
 $(document).ready( function () {
 	$(document).on('click', '.popup', function() {
 		if ($(this).parent().attr("class").includes("grid_item")) {
-			if ($(this).parent().attr("class").includes("first"))
+			if ($(this).parent().attr("class").includes("first")) {
 				$('.popup_main_image').css({'width': '75vw'});
+			}
 			showMainImage($(this).parent());
 		} else if ($(this).parent().attr("class").includes("paramoni_menu_item")) {
 			$('.paramoni_chosen_menu_content').html($(this).parent().children('.paramoni_menu_content').html());

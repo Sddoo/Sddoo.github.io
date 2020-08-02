@@ -316,7 +316,7 @@ img {
     top: 20px;
     left: 0;
     max-width: 90vw;
-    max-height: 100vh;
+    max-height: 95vh;
     overflow-y: scroll;
 }
 
@@ -463,6 +463,11 @@ img {
     .info_image {
         height: 35vh;
     }
+
+    .image_popup_wrap {
+        max-width: 85vw;
+        max-height: 90vh;
+    }
 }
 
 
@@ -494,5 +499,10 @@ img {
         right: 5px;
         width: 10px;
         height: 10px;
+    }
+
+    .image_popup_wrap {
+        max-width: 80vw;
+        max-height: 90vh;
     }
 }
