@@ -6,9 +6,13 @@ let contacts = $('.contacts');
 let info = $('.info');
 let gridContainer = $(".grid_container");
 
+
+document.body.style.overflow = 'hidden';
+
 //preloader
 window.onload = function () {
 	document.body.classList.add('loaded_hiding');
+	document.body.style.overflow = 'scroll';
 	window.setTimeout(function () {
 		document.body.classList.add('loaded');
 		document.body.classList.remove('loaded_hiding');
