@@ -21,6 +21,42 @@ img {
     pointer-events: none;
 }
 
+
+/*preload*/
+.preloader {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    /* фоновый цвет */
+    background: #000;
+    z-index: 1001;
+}
+
+.preloader__image {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    width: 70px;
+    height: 70px;
+    margin-top: -35px;
+    margin-left: -35px;
+    text-align: center;
+}
+
+.loaded_hiding .preloader {
+    transition: 0.3s opacity;
+    overflow: hidden;
+    opacity: 0;
+}
+
+.loaded .preloader {
+    display: none;
+    overflow: scroll;
+}
+
 /*buttons*/
 .buttons_container {
     margin-top: 20px;
