@@ -47,72 +47,34 @@ h1, h3 {
 
 .flex_container {
     width: 100%;
-    height: 6%;
+    height: 40vh;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: nowrap;
     justify-content: space-between;
     margin-bottom: 1%;
 }
 
 .info_skills {
-    width: 15%;
+    width: 100%;
+    height: 15%;
+    margin-bottom: 1%;
+    display: flex;
+    align-items: center;
+}
+
+.skill_image {
+    display: inline-block;
     height: 100%;
-    background-size: contain;
-    background-repeat: no-repeat;
-    transition: all 0.2s ease-in-out;
+    margin-right: 30px;
 }
 
-.first_skill {
-     background-image: url("../infimages/2.1.jpg");
-}
-
-.first_skill:hover {
-    background-image: url("../infimages/2.2.jpg");
-}
-
-.second_skill {
-    background-image: url("../infimages/6.1.jpg");
-}
-
-.second_skill:hover {
-    background-image: url("../infimages/6.2.jpg");
-}
-
-.third_skill {
-    background-image: url("../infimages/3.1.jpg");
-}
-
-.third_skill:hover {
-    background-image: url("../infimages/3.2.jpg");
-}
-
-.fourth_skill {
-    background-image: url("../infimages/4.1.jpg");
-}
-
-.fourth_skill:hover {
-    background-image: url("../infimages/4.2.jpg");
-}
-
-.fifth_skill {
-    background-image: url("../infimages/5.1.jpg");
-}
-
-.fifth_skill:hover {
-    background-image: url("../infimages/5.2.jpg");
-}
-
-.sixth_skill {
-    background-image: url("../infimages/1.1.jpg");
-}
-
-.sixth_skill:hover {
-    background-image: url("../infimages/1.2.jpg");
+.skill_text {
+    display: inline-block;
 }
 
 .education {
-    margin-bottom: 20vh;
+    padding-bottom: 200px;
 }
 
 
