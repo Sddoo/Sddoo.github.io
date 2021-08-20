@@ -6,17 +6,25 @@ let contacts = $('.contacts');
 let info = $('.info');
 let gridContainer = $(".grid_container");
 
-//preloader
+
 document.body.style.overflowY = 'hidden';
 
-for (let i = 0; i < 100; i++) {
-	document.querySelector('.ldBar').dataset.value = i;
-	sleep(10);
+//preloader
+
+//preloader
+document.body.style.overflowY = 'hidden';
+let loadBar = document.querySelector('.ldBar');
+
+let loadingBar = () => {
+	loadBar.dataset.value++;
 }
+
+let loadBarInterval = setInterval(loadingBar, 100);
 
 window.onload = function () {
 	document.body.classList.add('loaded');
 	document.body.classList.remove('loaded_hiding');
+	clearInterval(loadBarInterval);
 };
 
 //optimization
