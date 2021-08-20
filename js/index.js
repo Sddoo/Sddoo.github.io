@@ -6,17 +6,17 @@ let contacts = $('.contacts');
 let info = $('.info');
 let gridContainer = $(".grid_container");
 
-
+//preloader
 document.body.style.overflowY = 'hidden';
 
-//preloader
+for (let i = 0; i < 100; i++) {
+	document.querySelector('.ldBar').dataset.value = i;
+	sleep(10);
+}
+
 window.onload = function () {
-	document.body.classList.add('loaded_hiding');
-	document.body.style.overflowY = 'scroll';
-	window.setTimeout(function () {
-		document.body.classList.add('loaded');
-		document.body.classList.remove('loaded_hiding');
-	}, 500);
+	document.body.classList.add('loaded');
+	document.body.classList.remove('loaded_hiding');
 };
 
 //optimization

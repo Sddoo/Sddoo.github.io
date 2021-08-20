@@ -2,10 +2,53 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ebf93954-daba-49ca-9544-ef6ac7d0dba0" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/css/loading-bar.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/loading-bar.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/nprogress.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/nprogress.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/nprogress/.npmignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/nprogress/.travis.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/nprogress/History.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/nprogress/License.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/nprogress/Notes.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/nprogress/Readme.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/nprogress/bower.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/nprogress/component.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/nprogress/nprogress.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/nprogress/nprogress.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/nprogress/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/nprogress/test/component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/nprogress/test/test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/turbolinks/CHANGELOG.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/turbolinks/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/turbolinks/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/turbolinks/dist/turbolinks.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/turbolinks/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/turbolinks/src/turbolinks/BANNER.js.erb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/turbolinks/src/turbolinks/VERSION" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/turbolinks/src/turbolinks/browser_adapter.coffee" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/turbolinks/src/turbolinks/compatibility.coffee" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/turbolinks/src/turbolinks/controller.coffee" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/turbolinks/src/turbolinks/error_renderer.coffee" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/turbolinks/src/turbolinks/head_details.coffee" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/turbolinks/src/turbolinks/helpers.coffee" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/turbolinks/src/turbolinks/history.coffee" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/turbolinks/src/turbolinks/http_request.coffee" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/turbolinks/src/turbolinks/index.coffee" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/turbolinks/src/turbolinks/location.coffee" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/turbolinks/src/turbolinks/progress_bar.coffee" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/turbolinks/src/turbolinks/renderer.coffee" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/turbolinks/src/turbolinks/script_warning.coffee" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/turbolinks/src/turbolinks/scroll_manager.coffee" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/turbolinks/src/turbolinks/snapshot.coffee" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/turbolinks/src/turbolinks/snapshot_cache.coffee" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/turbolinks/src/turbolinks/snapshot_renderer.coffee" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/turbolinks/src/turbolinks/start.coffee" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/turbolinks/src/turbolinks/view.coffee" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/turbolinks/src/turbolinks/visit.coffee" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,7 +129,7 @@
       <workItem from="1585047146409" duration="856000" />
       <workItem from="1596365832226" duration="11416000" />
       <workItem from="1596380054994" duration="1895000" />
-      <workItem from="1629455266186" duration="5746000" />
+      <workItem from="1629455266186" duration="9520000" />
     </task>
     <servers />
   </component>
