@@ -45,7 +45,7 @@ img {
 }
 
 .loaded .preloader {
-    display: block;
+    display: none;
 }
 
 /*buttons*/
