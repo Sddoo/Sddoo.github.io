@@ -6,20 +6,15 @@ let contacts = $('.contacts');
 let info = $('.info');
 let gridContainer = $(".grid_container");
 
-
-document.body.style.overflowY = 'hidden';
-
-//preloader
-
 //preloader
 document.body.style.overflowY = 'hidden';
-let loadBar = document.querySelector('.ldBar');
+let loadBar = new ldBar('#ldBar');
 
 let loadingBar = () => {
-	loadBar.dataset.value++;
+	loadBar.set(loadBar.transition.value.src + 1);
 }
 
-let loadBarInterval = setInterval(loadingBar, 100);
+let loadBarInterval = setInterval(loadingBar, 50);
 
 window.onload = function () {
 	document.body.classList.add('loaded');

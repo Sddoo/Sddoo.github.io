@@ -1,14 +1,25 @@
-.ldBar {
+#ldBar {
     position: relative;
+    top: 45vh;
 }
-.ldBar.label-center > .ldBar-label {
+#ldBar.label-center > .ldBar-label {
     position: absolute;
     top: 50%;
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-    text-shadow: 0 0 3px #fff;
+    color: white;,
 }
+
+#ldBar.label-bottom > .ldBar-label {
+    position: absolute;
+    bottom: -50px;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
 .ldBar-label:after {
     content: "%";
     display: inline;
