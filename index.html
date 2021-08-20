@@ -9,15 +9,19 @@
 	<meta property="og:image" content="infimages/7.1.jpg"/>
 	<link rel="stylesheet" href="css/index.css">
 	<link href="https://fonts.googleapis.com/css?family=Comfortaa&display.." rel="stylesheet">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-	<script src='js/nprogress.js'></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src='node_modules/nprogress/nprogress.js'></script>
+	<link rel='stylesheet' href='node_modules/nprogress/nprogress.css'/>
 	<script>
-		$('body').show();
-		$('.version').text(NProgress.version);
-		NProgress.start();
-		setTimeout(function() { NProgress.done(); $('.fade').removeClass('out'); }, 1000);
+		$(document).on('turbolinks:click', function() {
+			console.log('test');
+			NProgress.start();
+		});
+		$(document).on('turbolinks:render', function() {
+			NProgress.done();
+			NProgress.remove();
+		});
 	</script>
-	<link rel='stylesheet' href='css/nprogress.css'/>
 	<title>Портфолио Золотарева Виктория</title>
 </head>
 <body>
