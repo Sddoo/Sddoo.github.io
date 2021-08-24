@@ -19,6 +19,7 @@ let loadBarInterval = setInterval(loadingBar, 50);
 window.onload = function () {
 	document.body.classList.add('loaded');
 	document.body.classList.remove('loaded_hiding');
+	document.body.style.overflowY = 'visible';
 	clearInterval(loadBarInterval);
 };
 
