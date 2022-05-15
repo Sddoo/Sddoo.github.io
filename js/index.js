@@ -40,7 +40,7 @@ function showAddImage(imageName, left) {
 	let slider = $(".slider"),
 		coords = document.querySelector('.image_popup_wrap').getBoundingClientRect();
 
-	$(".popup_add_image")[0].src = 'images/' + imageName.slice(0, 1) + ".2.jpg";
+	$(".popup_add_image")[0].src = 'images/' + imageName.split('.')[0] + ".2.jpg";
 	slider.css({'left': coords.left,
 				'top': coords.bottom + 15 + 'px',
 				'width': coords.right - coords.left + 'px',
@@ -71,10 +71,12 @@ function showMainImage(elem) {
 									'width': $(".popup_main_image").width()});
 	$(".close_button").css({'display': 'block',
 							'left': left + $(".popup_main_image").width() / window.innerWidth * 100 + 1 + '%'});
-	if (imageName.includes("with") === true) {
+	if (imageName.includes("with")) {
 		showAddImage(imageName, left);
 	}
 }
+
+let curItem = null
 
 $(document).ready( function () {
 	$(document).on('click', '.popup', function() {
@@ -82,6 +84,7 @@ $(document).ready( function () {
 			if ($(this).parent().attr("class").includes("first")) {
 				$('.popup_main_image').css({'width': '75vw'});
 			}
+			curItem = $(this).parent();
 			showMainImage($(this).parent());
 		} else if ($(this).parent().attr("class").includes("paramoni_menu_item")) {
 			$('.paramoni_chosen_menu_content').html($(this).parent().children('.paramoni_menu_content').html());
@@ -89,15 +92,29 @@ $(document).ready( function () {
 	});
 });
 
-$(".arrow").on('click', function() {
+
+function findForwardItem(cur) {
+	let allItems = $(".grid_item");
+
+	console.log(cur);
+	for (let i = 0; i < allItems.length; i++) {
+		if (allItems[i] === cur)
+			console.log('found!');
+	}
+}
+
+$(".arrow").on('click', function(e) {
 	let className = $(".popup_main_image")[0].alt;
+	findForwardItem(curItem);
 
 	if ($(this).hasClass("larrow") && typeof $("." + className).prev(".grid_item")[0] !== 'undefined') {
 		closePopup();
-		showMainImage($("." + className).prev(".grid_item"));
+		curItem = curItem.prev(".grid_item");
+		showMainImage(curItem);
 	} else if ($(this).hasClass("rarrow") && typeof $("." + className).next(".grid_item")[0] !== 'undefined') {
 		closePopup();
-		showMainImage($("." + className).next(".grid_item"));
+		curItem = curItem.next(".grid_item")
+		showMainImage(curItem);
 	}
 });
 
