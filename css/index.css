@@ -239,14 +239,13 @@ img {
     background-color: white;
 }
 
-.library_description_content {
+.library_description_text {
     width: 80%;
     margin: auto;
 }
 
-.library_plan {
-    width: 90%;
-    margin: 0 5%;
+.library_description_image {
+    width: 100%;
 }
 
 

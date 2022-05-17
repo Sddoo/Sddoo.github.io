@@ -6,6 +6,7 @@ let contacts = $('.contacts');
 let info = $('.info');
 let gridContainer = $(".grid_container");
 
+
 //preloader
 document.body.style.overflowY = 'hidden';
 let loadBar = new ldBar('#ldBar');
@@ -49,11 +50,16 @@ function showAddImage(imageName, left) {
 	$('.abs').css({'width': parseInt(sliderCircle.css('left')) + 25 + 'px'});
 }
 
+function preventDefault(e) {
+	e.preventDefault();
+  }
+
 function showMainImage(elem) {
 	let imagePath;
 	let imageName;
 	let left;
 
+	document.body.style.overflowY = "hidden";
 	$(".image_popup_text_wrap").html(elem.children(".description").html());
 	$(".arrow").css({'display': 'block'});
 	contacts.animate({left: leftValue}, 500);
@@ -158,6 +164,7 @@ $(document).mouseup(function () {
 
 // close popup
 function closePopup () {
+	document.body.style.overflowY = "scroll";
 	imageWrap.css({'display': 'none'});
 	$('.popup_main_image').css({'width': ''});
 	$(".popup_bg").css({'display': 'none'});
